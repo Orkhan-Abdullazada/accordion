@@ -1,0 +1,16 @@
+
+const headBtns = document.querySelectorAll(".accordion_header");
+const accBodies = document.querySelectorAll(".accordion_body");
+
+for (let i = 0; i < headBtns.length; i++) {
+    headBtns[i].addEventListener("click", function() {
+        for (let a = 0; a < accBodies.length; a++) {
+            if (i !== a) {
+                accBodies[a].classList.remove('active');
+            }
+        }
+
+    })
+}
+
+
